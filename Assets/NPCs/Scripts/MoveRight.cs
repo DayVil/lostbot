@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveRight : MonoBehaviour
 {
+    public float speed = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,6 @@ public class MoveRight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position+= Vector3.right * speed * Time.deltaTime;
     }
 }
