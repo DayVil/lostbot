@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 79363931}
   - component: {fileID: 79363930}
   - component: {fileID: 79363929}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,6 +293,7 @@ GameObject:
   - component: {fileID: 442079504}
   - component: {fileID: 442079503}
   - component: {fileID: 442079502}
+  - component: {fileID: 442079506}
   m_Layer: 0
   m_Name: Bot
   m_TagString: Untagged
@@ -423,12 +424,30 @@ Transform:
   m_GameObject: {fileID: 442079501}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.13, y: -2.28, z: 0}
+  m_LocalPosition: {x: -7.13, y: -1, z: 0}
   m_LocalScale: {x: 0.5024, y: 0.5024, z: 0.5024}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &442079506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442079501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e121db7ee9b8348b365e4d14084550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundSpeed: 5
+  airSpeed: 2
+  speedUp: 500
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +552,7 @@ GameObject:
   - component: {fileID: 538328947}
   - component: {fileID: 538328946}
   - component: {fileID: 538328945}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -725,7 +744,7 @@ GameObject:
   - component: {fileID: 1355605459}
   - component: {fileID: 1355605458}
   - component: {fileID: 1355605457}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
