@@ -27,38 +27,17 @@ namespace NPCs.Scripts.Movement
         
         private float MovSpeed(float currentSpeed, float buildUp, float limit)
         {
-            float tmpSpeed = 0f;
-            if (_isGroundedToggle)
-            {
-                _isGroundedToggle = false;
-                return tmpSpeed;
-            }
+            if (currentSpeed >= limit) return limit;
             
-            if (currentSpeed == 0)
-            {
-                currentSpeed = 0.1f;    
-            }
-            
-            if (tmpSpeed < limit)
-            {
-                tmpSpeed = currentSpeed + buildUp * Time.deltaTime * Time.deltaTime;
-            } //else if (tmpSpeed * 1.2 > limit)
-            // {
-            //     tmpSpeed = currentSpeed - buildUp * Time.deltaTime * Time.deltaTime;
-            // }
-            else
-            {
-                tmpSpeed = limit;
-            }
-            
-            
-            return tmpSpeed;
+            var increase = buildUp * Time.deltaTime;
+            currentSpeed += increase * increase;
+            currentSpeed = Math.Min(currentSpeed, limit);
+            return currentSpeed;
         }
         
         private void FixedUpdate()
         {
-            // _speed = IsGrounded() ? MovSpeed(_speed, speedUp, groundSpeed) : MovSpeed(_speed, speedUp, airSpeed);
-            _speed = MovSpeed(_speed, speedUp, groundSpeed);
+            _speed = IsGrounded() ? MovSpeed(_speed, speedUp, groundSpeed) : MovSpeed(_speed, speedUp, airSpeed);
 
             transform.Translate(Vector3.right * (_speed * Time.deltaTime));
         }

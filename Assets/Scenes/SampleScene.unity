@@ -443,8 +443,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundSpeed: 5
-  airSpeed: 2
-  speedUp: 500
+  airSpeed: 3
+  speedUp: 10
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
