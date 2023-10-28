@@ -1,28 +1,38 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Platform
 {
     public class FollowMouse : MonoBehaviour
     {
-        public LayerMask groundLayer;
+        public String groundLayer;
+        public float alpha = 0.5f;
         
         private bool _isFollowing = true;
         private Camera _cam;
-        private Collider2D _col;
+        private SpriteRenderer _sr;
+        private Color _originalColor;
+        private int _ground;
+        private bool _isPlacable;
         
         private void Start()
         {
             _cam = Camera.main!;
-            _col = GetComponent<Collider2D>();
-            _col.enabled = false;
+            _sr = GetComponent<SpriteRenderer>();
+            _ground = LayerMask.NameToLayer(groundLayer);
+            
+            _originalColor = _sr.color;
+            var grayscale = _originalColor.grayscale;
+            var newColor = new Color(grayscale,grayscale,grayscale,alpha);
+            
+            _sr.color = newColor;
         }
 
         private void Update()
         {
+            if (!_isFollowing) return;
             if (Input.GetMouseButtonDown(0)) DeactivateFollow();
-            if (_isFollowing) Follow();
+            Follow();
         }
 
         private void Follow()
@@ -34,9 +44,22 @@ namespace Platform
 
         private void DeactivateFollow()
         {
+            if (!_isPlacable) return; 
+            
             _isFollowing = false;
-            _col.enabled = true;
-            // gameObject.layer = groundLayer;
+            gameObject.layer = _ground;
+            
+            _sr.color = _originalColor;
+        }
+
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            _isPlacable = false;
+        }
+        
+        private void OnCollisionExit2D(Collision2D other)
+        {
+            _isPlacable = true;
         }
     }
 }
