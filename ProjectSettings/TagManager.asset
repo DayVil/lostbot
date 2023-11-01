@@ -6,6 +6,8 @@ TagManager:
   tags:
   - NPCPlayer
   - Platform
+  - UnPlatform
+  - Paused
   layers:
   - Default
   - TransparentFX
