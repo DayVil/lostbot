@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundLayer: Obstacle
   alpha: 0.5
+  placingCd: 0.2
 --- !u!61 &5692903493190015922
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,5 +172,5 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0

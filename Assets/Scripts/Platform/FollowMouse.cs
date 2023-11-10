@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Platform
@@ -6,11 +7,12 @@ namespace Platform
     {
         public string groundLayer;
         public float alpha = 0.5f;
+        
         private Camera _cam;
         private int _ground;
 
         private bool _isFollowing = true;
-        private bool _isPlacable = true;
+        private bool _isPlacable;
         private Color _originalColor;
         private SpriteRenderer _sr;
 
@@ -34,6 +36,7 @@ namespace Platform
             Follow();
         }
 
+        // BUG: If platform is inside an object but leaves the collision of another it will be placable
         private void OnCollisionEnter2D(Collision2D other)
         {
             _isPlacable = false;
