@@ -1,10 +1,11 @@
+using System;
 using UnityEngine;
 
 namespace Platform
 {
     public class FollowMouse : MonoBehaviour
     {
-        public string groundLayer;
+        public LayerMask groundLayer;
         public float alpha = 0.5f;
         private Camera _cam;
         private int _ground;
@@ -18,7 +19,7 @@ namespace Platform
         {
             _cam = Camera.main!;
             _sr = GetComponent<SpriteRenderer>();
-            _ground = LayerMask.NameToLayer(groundLayer);
+            _ground = (int)Math.Log(groundLayer, 2);
 
             _originalColor = _sr.color;
             var grayscale = _originalColor.grayscale;

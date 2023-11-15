@@ -99,7 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5607792eeca5438ea662cecfe7100dad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundLayer: Obstacle
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
   alpha: 0.5
 --- !u!61 &5692903493190015922
 BoxCollider2D:
