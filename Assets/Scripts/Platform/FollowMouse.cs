@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Platform
@@ -12,12 +13,13 @@ namespace Platform
         private int _ground;
 
         private bool _isFollowing = true;
-        private bool _isPlacable;
         private Color _originalColor;
         private SpriteRenderer _sr;
+        private List<Collider2D> _allCollisions;
 
         private void Start()
         {
+            _allCollisions = new List<Collider2D>();
             _cam = Camera.main!;
             _sr = GetComponent<SpriteRenderer>();
             _ground = (int)Math.Log(groundLayer, 2);
@@ -39,12 +41,13 @@ namespace Platform
         // BUG: If platform is inside an object but leaves the collision of another it will be placable
         private void OnCollisionEnter2D(Collision2D other)
         {
-            _isPlacable = false;
+            _allCollisions.Add(other.collider);
+            
         }
 
         private void OnCollisionExit2D(Collision2D other)
         {
-            _isPlacable = true;
+            _allCollisions.Remove(other.collider);
         }
 
         private void Follow()
@@ -56,7 +59,7 @@ namespace Platform
 
         private void DeactivateFollow()
         {
-            if (!_isPlacable) return;
+            if (_allCollisions.Count != 0) return;
             _isFollowing = false;
             gameObject.layer = _ground;
             gameObject.tag = "Platform";
