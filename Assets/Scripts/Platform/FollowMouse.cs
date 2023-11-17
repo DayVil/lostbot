@@ -15,11 +15,10 @@ namespace Platform
         private bool _isFollowing = true;
         private Color _originalColor;
         private SpriteRenderer _sr;
-        private List<Collider2D> _allCollisions;
+        private readonly List<Collider2D> _allCollisions = new ();
 
         private void Start()
         {
-            _allCollisions = new List<Collider2D>();
             _cam = Camera.main!;
             _sr = GetComponent<SpriteRenderer>();
             _ground = (int)Math.Log(groundLayer, 2);
@@ -34,7 +33,7 @@ namespace Platform
         private void Update()
         {
             if (!_isFollowing) return;
-            if (Input.GetMouseButtonDown(0)) DeactivateFollow();
+            if (Input.GetMouseButtonDown(0)) PlacePlatform();
             Follow();
         }
 
@@ -57,7 +56,7 @@ namespace Platform
             transform.position = new Vector3(mousePos.x, mousePos.y, tmpPos.z);
         }
 
-        private void DeactivateFollow()
+        private void PlacePlatform()
         {
             if (_allCollisions.Count != 0) return;
             _isFollowing = false;
