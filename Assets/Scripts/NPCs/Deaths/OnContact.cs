@@ -11,6 +11,7 @@ namespace NPCs.Deaths
         private Collider2D _col;
         private Vector3 _curPos;
         private float _timer;
+        private readonly Manager _manager = Manager.GetInstance;
 
         private void Start()
         {
@@ -20,6 +21,7 @@ namespace NPCs.Deaths
 
         private void LateUpdate()
         {
+            if (!_manager.StartGame) return;
             if (_col.IsTouchingLayers(contactLayer))
             {
                 Destroy(gameObject);

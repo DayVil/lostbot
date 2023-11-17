@@ -8,19 +8,18 @@ namespace UI
     {
         public string changeName;
         public TextMeshProUGUI playText;
-
-        private float _oldTimeScale;
+        
+        private readonly Manager _manager = Manager.GetInstance;
 
         private void Start()
         {
-            _oldTimeScale = Time.timeScale;
-            Time.timeScale = 0f;
+            _manager.StartGame = false;
         }
 
         public void ChangeText()
         {
+            _manager.StartGame = true;
             playText.text = changeName;
-            Time.timeScale = _oldTimeScale;
         }
     }
 }
