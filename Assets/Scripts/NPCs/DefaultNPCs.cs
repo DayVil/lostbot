@@ -4,6 +4,9 @@ namespace NPCs
 {
     public class MoveRight : MonoBehaviour
     { 
+
+        public Animator animator;
+
         public float groundSpeed = 5f;
         public float airSpeed = 2f;
         public float speedUp = 500f;
@@ -21,6 +24,7 @@ namespace NPCs
         private void FixedUpdate()
         {
             if (!_manager.StartGame) return;
+            animator.SetBool("isRunning", true);
             _currentSpeed = IsGrounded() ? MoveSpeed(_currentSpeed, speedUp, groundSpeed) : MoveSpeed(_currentSpeed, speedUp, airSpeed);
 
             transform.Translate(Vector3.right * (_currentSpeed * Time.deltaTime));

@@ -179,10 +179,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5758483166273736292, guid: ee928f239f3f12841be0803bcae292b8, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1409208117}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1850,11 +1846,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 679830135}
---- !u!95 &1409208117 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3547074671294458763, guid: ee928f239f3f12841be0803bcae292b8, type: 3}
-  m_PrefabInstance: {fileID: 212448975}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1527810466
 GameObject:
   m_ObjectHideFlags: 0
