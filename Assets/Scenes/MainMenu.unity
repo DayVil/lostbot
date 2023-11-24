@@ -564,6 +564,7 @@ GameObject:
   - component: {fileID: 501681678}
   - component: {fileID: 501681677}
   - component: {fileID: 501681676}
+  - component: {fileID: 501681679}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -635,9 +636,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UI.SpawnPlatform, Assembly-CSharp
-        m_MethodName: Spawn
+      - m_Target: {fileID: 501681679}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: changeScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -685,6 +686,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501681674}
   m_CullTransparentMesh: 1
+--- !u!114 &501681679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501681674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59088c4dcb34c9e408eb1dbfde2afd4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Settings
 --- !u!1 &536863165
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,6 +892,7 @@ GameObject:
   - component: {fileID: 1592118469}
   - component: {fileID: 1592118468}
   - component: {fileID: 1592118467}
+  - component: {fileID: 1592118470}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -949,9 +964,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UI.SpawnPlatform, Assembly-CSharp
-        m_MethodName: Spawn
+      - m_Target: {fileID: 1592118470}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: changeScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -999,6 +1014,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592118465}
   m_CullTransparentMesh: 1
+--- !u!114 &1592118470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592118465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59088c4dcb34c9e408eb1dbfde2afd4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Credits
 --- !u!1 &1717804878
 GameObject:
   m_ObjectHideFlags: 0
