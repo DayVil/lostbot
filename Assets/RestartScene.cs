@@ -21,7 +21,7 @@ public class RestartScene : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
-        Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+        Time.timeScale = 1;
 
     }
 }
