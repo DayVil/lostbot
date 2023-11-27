@@ -6,12 +6,8 @@ public class EscMenu : MonoBehaviour
 {
     public GameObject menuPanel;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private readonly Manager _manager = Manager.GetInstance;
+   
 
     // Update is called once per frame
     void Update()
@@ -20,8 +16,13 @@ public class EscMenu : MonoBehaviour
         {
             menuPanel.SetActive(!menuPanel.activeSelf);
 
-            Time.timeScale = menuPanel.activeSelf ? 0f : 1f;
-        }
+            if(_manager.GameOver == false) 
+            {
+                Debug.Log("Game not over");
+                Time.timeScale = menuPanel.activeSelf ? 0f : 1f;
+            }
         
+        }
+            
     }
 }

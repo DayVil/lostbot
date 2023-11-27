@@ -4,23 +4,15 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private Manager _manager = Manager.GetInstance;
 
     private void OnTriggerEnter2D(Collider2D collider) 
     {
         if(collider.gameObject.tag == "NPCPlayer")
         {
             Time.timeScale = 0f;
+            Debug.Log("You Win!");
+            _manager.GameOver = true;
         }
     }
 }

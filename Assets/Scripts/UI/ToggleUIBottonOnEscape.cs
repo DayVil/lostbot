@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class ToggleUIBottonOnEscape : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-
     public GameObject pauseMenuUI;
+    private readonly Manager _manager = Manager.GetInstance;
 
 
     // Update is called once per frame
@@ -29,7 +29,10 @@ public class ToggleUIBottonOnEscape : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
+        if(_manager.GameOver == false) 
+        {
+            Time.timeScale = 1f;
+        }
         GameIsPaused = false;
     }
 

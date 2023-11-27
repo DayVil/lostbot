@@ -7,6 +7,7 @@ public class Manager
 {
     private static readonly Lazy<Manager> Instance = new(() => new Manager());
     public bool StartGame = false;
+    public bool GameOver = false;
 
     private Manager(){}
     
