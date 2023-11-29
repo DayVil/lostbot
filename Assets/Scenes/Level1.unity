@@ -543,7 +543,6 @@ GameObject:
   - component: {fileID: 1070540977}
   - component: {fileID: 1070540980}
   - component: {fileID: 1070540979}
-  - component: {fileID: 1070540978}
   m_Layer: 1
   m_Name: Tilemap_background (2)
   m_TagString: Untagged
@@ -566,21 +565,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1765939907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1070540978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1070540976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1316f9491b194464fbabd7a56195ca75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 519420028}
-  parallaxEffect: 1
-  tilemap: {fileID: 1070540980}
 --- !u!483693784 &1070540979
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -4249,7 +4233,6 @@ GameObject:
   - component: {fileID: 1765939907}
   - component: {fileID: 1765939909}
   - component: {fileID: 1765939908}
-  - component: {fileID: 1765939910}
   m_Layer: 1
   m_Name: Tilemap_background
   m_TagString: Untagged
@@ -6801,21 +6784,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1765939910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1765939906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1316f9491b194464fbabd7a56195ca75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 519420028}
-  parallaxEffect: 1
-  tilemap: {fileID: 1765939909}
 --- !u!1 &1813884935
 GameObject:
   m_ObjectHideFlags: 0
@@ -6827,7 +6795,6 @@ GameObject:
   - component: {fileID: 1813884936}
   - component: {fileID: 1813884939}
   - component: {fileID: 1813884938}
-  - component: {fileID: 1813884937}
   m_Layer: 1
   m_Name: Tilemap_background (1)
   m_TagString: Untagged
@@ -6850,21 +6817,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1765939907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1813884937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1813884935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1316f9491b194464fbabd7a56195ca75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 519420028}
-  parallaxEffect: 1
-  tilemap: {fileID: 1813884939}
 --- !u!483693784 &1813884938
 TilemapRenderer:
   m_ObjectHideFlags: 0
