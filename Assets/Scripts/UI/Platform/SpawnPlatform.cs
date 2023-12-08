@@ -1,30 +1,30 @@
+using TMPro;
 using UnityEngine;
 
 namespace UI
 {
     public class SpawnPlatform : MonoBehaviour
     {
-        public string platformTag = "UnPlatform";
-        public string childName = "Icon";
+        public int amountPlatforms = 3;
+        public TextMeshProUGUI text;
         public GameObject platformPrefab;
         public GameObject parentObject;
         public float swayAngle = 10f;
         public float swayTime = 1f;
 
         private readonly Manager _manager = Manager.GetInstance;
+        private const string ChildName = "Icon";
 
         // private List<Transform> _childrenList = new();
         private Transform _iconTransform;
         private Quaternion _startRotation;
+        private const string PlatformTag = "UnPlatform";
 
         private void Start()
         {
-            _iconTransform = transform.Find(childName);
+            _iconTransform = transform.Find(ChildName);
             _startRotation = _iconTransform.rotation;
-            // for (int i = 0; i < parentObject.transform.childCount; i++)
-            // {
-            //     _childrenList.Add(parentObject.transform.GetChild(i));
-            // }
+            text.text = amountPlatforms.ToString();
         }
 
         private void Update()
@@ -38,7 +38,10 @@ namespace UI
         public void Spawn()
         {
             if (_manager.StartGame) return;
-            if (GameObject.FindWithTag(platformTag) != null) return;
+            if (GameObject.FindWithTag(PlatformTag) != null) return;
+            if (amountPlatforms <= 0) return;
+            amountPlatforms--;
+            text.text = amountPlatforms.ToString();
             var tmpObj = Instantiate(platformPrefab, transform.position, Quaternion.identity);
             tmpObj.transform.parent = parentObject.transform;
         }
