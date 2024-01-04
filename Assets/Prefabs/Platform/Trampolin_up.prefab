@@ -189,8 +189,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb4d94990b74e5e4ea4f0d28d8e238f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceForce: 5
+  bounceForce: 10
   bounceTime: 0.5
+  launchTime: 0.0001
   animator: {fileID: 3879300139768477894}
 --- !u!95 &3879300139768477894
 Animator:
