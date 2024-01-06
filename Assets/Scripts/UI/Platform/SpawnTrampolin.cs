@@ -7,6 +7,7 @@ namespace UI.Platform
     public class SpawnTrampoline : MonoBehaviour
     {
         private const string PlatformTag = "UnPlatform";
+        private const string Tag = "TrampolinePlat";
         public int amountPlatforms = 3;
         public TextMeshProUGUI text;
         public GameObject platformPrefab;
@@ -16,7 +17,6 @@ namespace UI.Platform
         public float bounceTime = 0.5f;
 
         private readonly Manager _manager = Manager.GetInstance;
-        private readonly string tag = "TrampolinePlat";
         private int _amountPlatforms;
 
         private void Start()
@@ -27,7 +27,8 @@ namespace UI.Platform
 
         private void Update()
         {
-            _amountPlatforms = amountPlatforms - Utils.CountTags(tag);
+            if (_manager.StartGame) return;
+            _amountPlatforms = amountPlatforms - Utils.CountTags(Tag);
             text.text = _amountPlatforms.ToString();
         }
 
