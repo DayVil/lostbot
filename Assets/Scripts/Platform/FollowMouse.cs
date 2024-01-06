@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Platform
 {
@@ -8,14 +9,15 @@ namespace Platform
     {
         public LayerMask groundLayer;
         public float alpha = 0.5f;
-        
+        [FormerlySerializedAs("TagField")] public string tagField = "Platform";
+        private readonly List<Collider2D> _allCollisions = new();
+
         private Camera _cam;
         private int _ground;
 
         private bool _isFollowing = true;
         private Color _originalColor;
         private SpriteRenderer _sr;
-        private readonly List<Collider2D> _allCollisions = new ();
 
         private void Start()
         {
@@ -41,7 +43,6 @@ namespace Platform
         private void OnCollisionEnter2D(Collision2D other)
         {
             _allCollisions.Add(other.collider);
-            
         }
 
         private void OnCollisionExit2D(Collision2D other)
@@ -60,8 +61,9 @@ namespace Platform
         {
             if (_allCollisions.Count != 0) return;
             _isFollowing = false;
-            gameObject.layer = _ground;
-            gameObject.tag = "Platform";
+            var o = gameObject;
+            o.layer = _ground;
+            o.tag = tagField;
             _sr.color = _originalColor;
         }
     }

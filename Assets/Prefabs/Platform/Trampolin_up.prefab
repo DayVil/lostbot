@@ -177,6 +177,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   alpha: 0.5
+  tagField: TrampolinePlat
 --- !u!114 &219377839909410422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +192,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceForce: 10
   bounceTime: 0.5
-  launchTime: 0.0001
   animator: {fileID: 3879300139768477894}
 --- !u!95 &3879300139768477894
 Animator:

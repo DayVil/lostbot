@@ -8,6 +8,8 @@ TagManager:
   - Platform
   - UnPlatform
   - Paused
+  - BasePlat
+  - TrampolinePlat
   layers:
   - Default
   - TransparentFX

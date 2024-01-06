@@ -1,17 +1,17 @@
 using TMPro;
 using UnityEngine;
 
-namespace UI
+namespace UI.Platform
 {
     public class SpawnPlatform : MonoBehaviour
     {
+        private const string PlatformTag = "UnPlatform";
         public int amountPlatforms = 3;
         public TextMeshProUGUI text;
         public GameObject platformPrefab;
         public GameObject parentObject;
 
         private readonly Manager _manager = Manager.GetInstance;
-        private const string PlatformTag = "UnPlatform";
 
         private void Start()
         {
