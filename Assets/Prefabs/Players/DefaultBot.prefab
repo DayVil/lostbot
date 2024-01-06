@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3269428348338353766}
   - component: {fileID: 5879169956730244394}
   - component: {fileID: 8843009246289975481}
+  - component: {fileID: 3547074671294458763}
   - component: {fileID: 5758483166273736292}
   - component: {fileID: 3289627665903993331}
-  - component: {fileID: 3547074671294458763}
+  - component: {fileID: 4289818567167620718}
   m_Layer: 0
   m_Name: DefaultBot
   m_TagString: NPCPlayer
@@ -151,6 +152,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &3547074671294458763
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3918605654789985276}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2e9ccb297b2eefa45b64e923fd1b00b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &5758483166273736292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e121db7ee9b8348b365e4d14084550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   groundSpeed: 5
   airSpeed: 3
   speedUp: 50
@@ -185,24 +208,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   spawnProtection: 0.02
---- !u!95 &3547074671294458763
-Animator:
-  serializedVersion: 5
+--- !u!114 &4289818567167620718
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3918605654789985276}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2e9ccb297b2eefa45b64e923fd1b00b3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f962bea8fd342c48a10c7900db9bb8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depth: -7

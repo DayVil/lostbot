@@ -34,10 +34,14 @@ namespace NPCs.Deaths
             }
             
             var tmpCurPos = transform.position;
-            if (Math.Abs(tmpCurPos.x - _curPos.x) < 0.01f)
+            if (Math.Abs(_curPos.y - tmpCurPos.y) < 0.01f)
             {
-                Destroy(gameObject);
+                if (Math.Abs(tmpCurPos.x - _curPos.x) < 0.01f)
+                {
+                    Destroy(gameObject);
+                }
             }
+
             _curPos = tmpCurPos;
             _timer = spawnProtection; 
         }
