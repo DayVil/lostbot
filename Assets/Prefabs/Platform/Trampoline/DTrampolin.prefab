@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 219377839909410422}
   - component: {fileID: 3879300139768477894}
   m_Layer: 6
-  m_Name: Trampolin_up
+  m_Name: DTrampolin
   m_TagString: UnPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb4d94990b74e5e4ea4f0d28d8e238f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceForce: 10
+  bounceForce: 7
   bounceTime: 0.5
   animator: {fileID: 3879300139768477894}
 --- !u!95 &3879300139768477894
