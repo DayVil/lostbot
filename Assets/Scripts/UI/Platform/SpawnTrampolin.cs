@@ -37,6 +37,7 @@ namespace UI.Platform
                 trampoline.bounceForce = bounceForce;
                 trampoline.bounceTime = bounceTime;
             }
+            Utils.ChangeSize(0.9f, tmpObj);
         }
     }
 }

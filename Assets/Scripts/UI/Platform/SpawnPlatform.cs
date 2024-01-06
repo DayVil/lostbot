@@ -27,6 +27,7 @@ namespace UI
             text.text = amountPlatforms.ToString();
             var tmpObj = Instantiate(platformPrefab, transform.position, Quaternion.identity);
             tmpObj.transform.parent = parentObject.transform;
+            Utils.ChangeSize(1.1f, tmpObj);
         }
     }
 }
