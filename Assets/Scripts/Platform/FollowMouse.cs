@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Utils.MultipleTags;
 
 namespace Platform
 {
@@ -65,6 +66,11 @@ namespace Platform
             o.layer = _ground;
             o.tag = tagField;
             _sr.color = _originalColor;
+
+            var mt = o.GetComponent<MultiTags>();
+            if (mt is null) return;
+            mt.RemoveTag(EMultiTags.NotPlaced);
+            mt.AddTag(EMultiTags.Placed);
         }
     }
 }

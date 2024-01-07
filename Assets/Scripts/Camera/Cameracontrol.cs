@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
+using GameState;
 using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    private readonly Manager _manager = Manager.GetInstance;
-    private Vector3 worldContainerPosition;
     public float cameraSpeed;
+    private readonly Manager _manager = Manager.GetInstance;
     private Vector3 StartWorldContainerPosition;
+    private Vector3 worldContainerPosition;
 
     void Start()
     {
@@ -41,6 +40,7 @@ public class CameraControl : MonoBehaviour
         {
             worldContainerPosition.x += cameraSpeed / 10;
         }
+
         if (Input.GetKey(KeyCode.C))
         {
             worldContainerPosition.x = StartWorldContainerPosition.x;

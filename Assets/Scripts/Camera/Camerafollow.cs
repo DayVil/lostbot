@@ -1,3 +1,4 @@
+using GameState;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour

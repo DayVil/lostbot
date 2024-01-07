@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+using GameState;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ToggleUIBottonOnEscape : MonoBehaviour
 {
@@ -13,9 +11,9 @@ public class ToggleUIBottonOnEscape : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKeyUp(KeyCode.Escape))
         {
-            if(GameIsPaused)
+            if (GameIsPaused)
             {
                 Resume();
             }
@@ -29,10 +27,11 @@ public class ToggleUIBottonOnEscape : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        if(_manager.GameOver == false) 
+        if (_manager.GameOver == false)
         {
             Time.timeScale = 1f;
         }
+
         GameIsPaused = false;
     }
 
@@ -42,7 +41,4 @@ public class ToggleUIBottonOnEscape : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
-    
-
-    
 }

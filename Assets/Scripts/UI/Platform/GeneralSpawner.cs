@@ -1,3 +1,4 @@
+using GameState;
 using TMPro;
 using UnityEngine;
 
@@ -25,7 +26,7 @@ namespace UI.Platform
         private void Update()
         {
             if (_manager.StartGame) return;
-            _amountPlatforms = amountPlatforms - Utils.CountTags(placeTag);
+            _amountPlatforms = amountPlatforms - Utils.Utils.CountTags(placeTag);
             text.text = _amountPlatforms.ToString();
         }
 
@@ -36,7 +37,7 @@ namespace UI.Platform
             if (_amountPlatforms <= 0) return;
             var tmpObj = Instantiate(platformPrefab, transform.position, Quaternion.identity);
             tmpObj.transform.parent = parentObject.transform;
-            Utils.ChangeSize(scaleFactor, tmpObj);
+            Utils.Utils.ChangeSize(scaleFactor, tmpObj);
         }
     }
 }

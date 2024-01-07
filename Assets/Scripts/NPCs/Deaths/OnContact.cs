@@ -1,4 +1,5 @@
 using System;
+using GameState;
 using UnityEngine;
 
 namespace NPCs.Deaths
@@ -7,11 +8,11 @@ namespace NPCs.Deaths
     {
         public LayerMask contactLayer;
         public float spawnProtection = 1f;
-        
+        private readonly Manager _manager = Manager.GetInstance;
+
         private Collider2D _col;
         private Vector3 _curPos;
         private float _timer;
-        private readonly Manager _manager = Manager.GetInstance;
 
         private void Start()
         {
@@ -30,9 +31,9 @@ namespace NPCs.Deaths
             if (_timer > 0f)
             {
                 _timer -= Time.deltaTime;
-                return;   
+                return;
             }
-            
+
             var tmpCurPos = transform.position;
             if (Math.Abs(_curPos.y - tmpCurPos.y) < 0.01f)
             {
@@ -43,7 +44,7 @@ namespace NPCs.Deaths
             }
 
             _curPos = tmpCurPos;
-            _timer = spawnProtection; 
+            _timer = spawnProtection;
         }
     }
 }

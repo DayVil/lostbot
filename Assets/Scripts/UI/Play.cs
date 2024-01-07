@@ -1,4 +1,4 @@
-using System;
+using GameState;
 using TMPro;
 using UnityEngine;
 
@@ -8,7 +8,7 @@ namespace UI
     {
         public string changeName;
         public TextMeshProUGUI playText;
-        
+
         private readonly Manager _manager = Manager.GetInstance;
 
         private void Start()

@@ -1,24 +1,24 @@
-using TMPro;
+using GameState;
 using UnityEngine;
 
 namespace UI.Platform
 {
     public class SwayAnimation : MonoBehaviour
     {
+        private const string ChildName = "Icon";
         public float swayAngle = 10f;
         public float swayTime = 1f;
-        
+
         private readonly Manager _manager = Manager.GetInstance;
-        private const string ChildName = "Icon";
         private Transform _iconTransform;
         private Quaternion _startRotation;
-        
+
         private void Start()
         {
             _iconTransform = transform.Find(ChildName);
             _startRotation = _iconTransform.rotation;
         }
-        
+
         private void Update()
         {
             if (_manager.StartGame) return;

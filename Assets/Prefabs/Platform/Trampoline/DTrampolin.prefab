@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4257010112704480384}
   - component: {fileID: 3618686365582508585}
   - component: {fileID: 733547009622526943}
+  - component: {fileID: 3879300139768477894}
   - component: {fileID: 1554322067736170046}
   - component: {fileID: 219377839909410422}
-  - component: {fileID: 3879300139768477894}
+  - component: {fileID: 5683744203077725159}
   m_Layer: 6
   m_Name: DTrampolin
   m_TagString: UnPlatform
@@ -161,6 +162,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.7777778}
   m_EdgeRadius: 0
+--- !u!95 &3879300139768477894
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6391244302432862326}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8cc05e00d28201c4696db369a540b341, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1554322067736170046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,24 +215,16 @@ MonoBehaviour:
   bounceForce: 7
   bounceTime: 0.5
   animator: {fileID: 3879300139768477894}
---- !u!95 &3879300139768477894
-Animator:
-  serializedVersion: 5
+--- !u!114 &5683744203077725159
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6391244302432862326}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8cc05e00d28201c4696db369a540b341, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c44973ac8d491c4e9c0cd29e7717ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTags: 010000000200000004000000

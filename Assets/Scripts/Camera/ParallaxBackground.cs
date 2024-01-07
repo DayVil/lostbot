@@ -1,14 +1,14 @@
-using System.Collections;
+using GameState;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class ParallaxBackground : MonoBehaviour
 {
-    private readonly Manager _manager = Manager.GetInstance;
-    private float startpos;
     public GameObject cam;
     public float parallaxEffect;
     public Tilemap tilemap;
+    private readonly Manager _manager = Manager.GetInstance;
+    private float startpos;
 
     // Start is called before the first frame update
     void Start()

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2597560997566000092}
   - component: {fileID: 5293245897737894863}
   - component: {fileID: 2603423101810143895}
+  - component: {fileID: 1004052446150821003}
   m_Layer: 6
   m_Name: Platform01
   m_TagString: UnPlatform
@@ -176,3 +177,16 @@ MonoBehaviour:
     m_Bits: 128
   alpha: 0.5
   tagField: BasePlat
+--- !u!114 &1004052446150821003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266987030682621315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c44973ac8d491c4e9c0cd29e7717ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTags: 030000000100000004000000
