@@ -10,7 +10,6 @@ namespace UI.TopBar
 
         public void Restart()
         {
-            if (!_manager.StartGame) return;
             _manager.GameOver = false;
             _manager.StartGame = false;
             var currentScene = SceneManager.GetActiveScene();

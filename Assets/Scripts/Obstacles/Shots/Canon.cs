@@ -14,6 +14,7 @@ namespace Obstacles.Shots
         [SerializeField] private float fireRate = 1f;
 
         private readonly Manager _manager = Manager.GetInstance;
+        private float _currentTime;
 
         private void Start()
         {
@@ -22,9 +23,16 @@ namespace Obstacles.Shots
             bulletsType.SetSpeed(bulletSpeed);
             bulletsType.SetLifeTime(bulletLifeTime);
             bulletsType.SetObjectsToDestroy(lethalTo);
+            _currentTime = (float)(fireRate * 0.8);
+        }
 
-            InvokeRepeating(nameof(Shoot), 0f, fireRate);
+        private void Update()
+        {
+            if (!_manager.StartGame) return;
+            _currentTime += Time.deltaTime;
+            if (!(_currentTime >= fireRate)) return;
             Shoot();
+            _currentTime = 0;
         }
 
         private void Shoot()

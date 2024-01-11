@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb4d94990b74e5e4ea4f0d28d8e238f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceForce: 7
+  bounceForce: 8
   bounceTime: 0.5
   animator: {fileID: 3879300139768477894}
 --- !u!114 &5683744203077725159
@@ -227,4 +227,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c44973ac8d491c4e9c0cd29e7717ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTags: 010000000200000004000000
+  startTags: 010000000200000005000000
