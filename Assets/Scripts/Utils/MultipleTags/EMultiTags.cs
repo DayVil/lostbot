@@ -5,7 +5,9 @@
         Placed,
         NotPlaced,
         Trampoline,
+        Wall,
         Base,
-        Platform
+        Platform,
+        Player
     }
 }

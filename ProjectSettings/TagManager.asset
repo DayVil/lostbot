@@ -10,6 +10,7 @@ TagManager:
   - Paused
   - BasePlat
   - TrampolinePlat
+  - WallPlat
   layers:
   - Default
   - TransparentFX
