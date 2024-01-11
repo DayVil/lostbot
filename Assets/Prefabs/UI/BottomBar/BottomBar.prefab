@@ -400,8 +400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a3241927ac53e45a6df795878ae483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetVerticalPosition: -100
-  speed: 4
+  targetVerticalPosition: -500
+  speed: 3
   threshold: 0.1
 --- !u!1 &6587799702100364629
 GameObject:
