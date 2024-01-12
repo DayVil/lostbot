@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59088c4dcb34c9e408eb1dbfde2afd4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Wolrd2.1
+  sceneName: World2.1
 --- !u!114 &442032455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,9 +595,9 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 0}
     m_HighlightedColor: {r: 0.42352942, g: 0.42352942, b: 0.42352942, a: 0.39215687}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -870,7 +870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5671251532309854551, guid: 3369f80f79536f74e8aaed71d9644631, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -850
       objectReference: {fileID: 0}
     - target: {fileID: 5671251532309854551, guid: 3369f80f79536f74e8aaed71d9644631, type: 3}
       propertyPath: m_AnchoredPosition.y
