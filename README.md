@@ -30,6 +30,7 @@ LostBot is a game created for a Project in University. It is a game about an NPC
 - `D` - Move right
 - `Right Click` - Delete Platform
 - `Left Click` - Place Platform/Select Platform
+- `c` - Move camera to player
 
 ## Credits
 
