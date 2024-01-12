@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Worlds/01/World1.3.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Worlds/03/World3.unity
-    guid: a0e5dc394bfa74e4480af44caa70db4d
-  - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 49f9dbab33216d14d9fe65225c29b525
   - enabled: 1
