@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class QuitGame : MonoBehaviour
+namespace GameState
 {
-    public void Exit()
+    public class QuitGame : MonoBehaviour
     {
-        Application.Quit();
+        public void Exit()
+        {
+            Application.Quit();
+        }
     }
 }

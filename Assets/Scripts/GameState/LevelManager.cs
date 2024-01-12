@@ -1,14 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour
+namespace GameState
 {
-    public string sceneName;
-
-    public void changeScene()
+    public class LevelManager : MonoBehaviour
     {
-        SceneManager.LoadScene(sceneName);
+        public string sceneName;
+        private readonly Manager _manager = Manager.GetInstance;
+
+        public void ChangeScene()
+        {
+            SceneManager.LoadScene(sceneName);
+            _manager.StartGame = false;
+            _manager.GameOver = false;
+            Time.timeScale = 1;
+        }
     }
 }

@@ -1,19 +1,21 @@
-using GameState;
 using UnityEngine;
 
-public class Goal : MonoBehaviour
+namespace GameState
 {
-    public GameObject menuPanel;
-    private Manager _manager = Manager.GetInstance;
-
-    private void OnTriggerEnter2D(Collider2D collider)
+    public class Goal : MonoBehaviour
     {
-        if (collider.gameObject.tag == "NPCPlayer")
+        public GameObject menuPanel;
+        private readonly Manager _manager = Manager.GetInstance;
+
+        private void OnTriggerEnter2D(Collider2D collider)
         {
-            Time.timeScale = 0f;
-            Debug.Log("You Win!");
-            _manager.GameOver = true;
-            menuPanel.SetActive(true);
+            if (collider.gameObject.tag == "NPCPlayer")
+            {
+                Time.timeScale = 0f;
+                Debug.Log("You Win!");
+                _manager.GameOver = true;
+                menuPanel.SetActive(true);
+            }
         }
     }
 }
