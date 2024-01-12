@@ -12,9 +12,9 @@ namespace GameState
             if (collider.gameObject.tag == "NPCPlayer")
             {
                 Time.timeScale = 0f;
-                Debug.Log("You Win!");
                 _manager.GameOver = true;
                 menuPanel.SetActive(true);
+                Time.timeScale = 1f;
             }
         }
     }

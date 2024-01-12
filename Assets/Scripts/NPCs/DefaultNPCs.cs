@@ -24,6 +24,10 @@ namespace NPCs
         private void FixedUpdate()
         {
             if (!_manager.StartGame) return;
+            if(_manager.GameOver) {
+                animator.SetBool("isRunning", false);
+                return;
+            }
             animator.SetBool("isRunning", true);
             _currentSpeed = IsGrounded()
                 ? MoveSpeed(_currentSpeed, speedUp, groundSpeed)

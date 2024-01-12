@@ -23,6 +23,7 @@ namespace NPCs.Deaths
         private void LateUpdate()
         {
             if (!_manager.StartGame) return;
+            if (_manager.GameOver) return; 
             if (_col.IsTouchingLayers(contactLayer))
             {
                 Destroy(gameObject);
