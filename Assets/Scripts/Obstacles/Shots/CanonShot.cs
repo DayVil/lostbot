@@ -20,6 +20,9 @@ namespace Obstacles.Shots
         private void FixedUpdate()
         {
             if (!_manager.StartGame) return;
+            lifeTime -= Time.deltaTime;
+            if (lifeTime <= 0) Destroy(gameObject);
+
             transform.Translate(Vector2.left * (speed * Time.deltaTime));
         }
 

@@ -12,18 +12,14 @@ namespace Obstacles.Shots
         [SerializeField] private float bulletLifeTime = 5f;
         [SerializeField] private EMultiTags[] lethalTo;
         [SerializeField] private float fireRate = 1f;
+        [SerializeField] private float startFireRate = 0.8f;
 
         private readonly Manager _manager = Manager.GetInstance;
         private float _currentTime;
 
         private void Start()
         {
-            var bulletsType = bullet.GetComponent<IBulletType>();
-            if (bulletsType == null) throw new MissingComponentException("Bullet type not found");
-            bulletsType.SetSpeed(bulletSpeed);
-            bulletsType.SetLifeTime(bulletLifeTime);
-            bulletsType.SetObjectsToDestroy(lethalTo);
-            _currentTime = (float)(fireRate * 0.8);
+            _currentTime = fireRate * startFireRate;
         }
 
         private void Update()
@@ -38,7 +34,14 @@ namespace Obstacles.Shots
         private void Shoot()
         {
             if (!_manager.StartGame) return;
-            Instantiate(bullet, transform.position, Quaternion.identity);
+            var tmpObj = Instantiate(bullet, transform.position, Quaternion.identity);
+            var bulletsType = tmpObj.GetComponent<IBulletType>();
+            if (bulletsType == null) throw new MissingComponentException("Bullet type not found");
+            bulletsType.SetSpeed(bulletSpeed);
+            bulletsType.SetLifeTime(bulletLifeTime);
+            bulletsType.SetObjectsToDestroy(lethalTo);
+
+            tmpObj.transform.parent = transform;
         }
     }
 }
