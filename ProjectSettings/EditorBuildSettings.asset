@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Worlds/02/World2.3.unity
     guid: 698461cc6676aa94da5fe51beb9dbfe8
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: ddfa389f2ff75b64582e010a3e4f1821
   m_configObjects: {}
