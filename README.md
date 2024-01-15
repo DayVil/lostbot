@@ -1,5 +1,10 @@
 # LostBot
 
+<div style="text-align: center;">
+  <img src="./Docs/LostBot.png" alt="Logo">
+</div>
+
+
 ## Table of Contents
 
 - [LostBot](#lostbot)
@@ -44,3 +49,5 @@ LostBot is a game created for a Project in University. It is a game about an NPC
 - [9e0](https://9e0.itch.io/cute-legends-cat-heroes)
 
 ## Preview
+
+![Preview](./Docs/Preview.gif)
